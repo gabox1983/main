@@ -1,6 +1,5 @@
 // Proyecto Flutter: Interfaz con Búsqueda y Agregado de Ítems
 // Autor: Gabriel Colmenares
-// Desarrollado en Flutter — https://flutter.dev
 
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, // Oculta el banner de DEBUG
       title: 'App de Interfaz y Búsqueda',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
@@ -55,7 +54,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   void _addItem() {
     setState(() {
-      _items.add('Nuevo Artículo \${_items.length + 1}');
+      _items.add('Nuevo Artículo ${_items.length + 1}');
     });
   }
 
@@ -103,7 +102,7 @@ class _SearchScreenState extends State<SearchScreen> {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(filteredItems[index]),
-                  leading: const Icon(Icons.device_hub_outlined),
+                  leading: const Icon(Icons.devices_other_outlined),
                 );
               },
             )
@@ -120,4 +119,4 @@ class _SearchScreenState extends State<SearchScreen> {
       ),
     );
   }
-} 
+}
